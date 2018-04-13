@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 21:25:41 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 21:45:12 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/08 14:31:01 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/08 15:10:04 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	void			*dst;
-	int				i;
-	unsigned char	*clear;
+	unsigned long i;
+	unsigned long len_s1;
 
 	i = 0;
-	dst = (void *)malloc(size);
-	if (dst == NULL)
-		return (NULL);
-	clear = dst;
-	while (size--)
+	len_s1 = ft_strlen(s1);
+	while (s2[i] && s1 != NULL && i < n)
 	{
-		clear[i] = 0;
+		s1[i + len_s1] = s2[i];
 		i++;
 	}
-	return (dst);
+	s1[i + len_s1] = '\0';
+	return (s1);
 }

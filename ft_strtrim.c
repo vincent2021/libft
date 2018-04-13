@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 21:25:41 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 21:45:12 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/08 22:29:47 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/14 01:06:34 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memalloc(size_t size)
+char	*ft_strtrim(char const *s)
 {
-	void			*dst;
-	int				i;
-	unsigned char	*clear;
+	size_t	i;
+	size_t	l;
 
+	l = ft_strlen(s);
 	i = 0;
-	dst = (void *)malloc(size);
-	if (dst == NULL)
-		return (NULL);
-	clear = dst;
-	while (size--)
-	{
-		clear[i] = 0;
+	while (s[i] != '\0' && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		i++;
-	}
-	return (dst);
+	if (i == l)
+		return ("");
+	while (s[l] == ' ' || s[l] == '\n' || s[l] == '\t' || s[l] == '\0')
+		l--;
+	return (ft_strsub(s, i, l - i + 1));
 }

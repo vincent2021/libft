@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 21:25:41 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 21:45:12 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/08 22:05:46 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/08 23:32:09 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	void			*dst;
-	int				i;
-	unsigned char	*clear;
+	size_t	i;
+	char	*dst;
 
 	i = 0;
-	dst = (void *)malloc(size);
+	dst = (char *)(malloc(len + 1));
 	if (dst == NULL)
 		return (NULL);
-	clear = dst;
-	while (size--)
+	while (i < len)
 	{
-		clear[i] = 0;
+		dst[i] = s[start + i];
 		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }

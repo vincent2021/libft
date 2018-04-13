@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 21:25:41 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 21:45:12 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/08 22:10:30 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/08 22:29:10 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void			*dst;
-	int				i;
-	unsigned char	*clear;
+	size_t	i;
+	size_t	len_s1;
+	size_t	len_s2;
+	char	*dst;
 
 	i = 0;
-	dst = (void *)malloc(size);
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	dst = (char *)(malloc(len_s1 + len_s2 + 1));
 	if (dst == NULL)
 		return (NULL);
-	clear = dst;
-	while (size--)
+	while (s1[i])
 	{
-		clear[i] = 0;
+		dst[i] = s1[i];
 		i++;
 	}
+	i = 0;
+	while (s2[i])
+	{
+		dst[i + len_s1] = s2[i];
+		i++;
+	}
+	dst[len_s1 + len_s2] = '\0';
 	return (dst);
 }
