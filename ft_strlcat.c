@@ -6,13 +6,13 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 23:09:43 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/13 23:32:50 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/15 23:10:00 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strnlen(char *str, size_t n)
+static size_t	ft_strnlen(char *str, size_t n)
 {
 	size_t	i;
 
@@ -25,7 +25,8 @@ size_t	ft_strnlen(char *str, size_t n)
 	return (i);
 }
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
+size_t			ft_strlcat(char *restrict dst, const char *restrict src,
+		size_t size)
 {
 	size_t	d;
 	size_t	len_dst;

@@ -6,18 +6,19 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 22:29:47 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/14 01:06:34 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/15 22:38:40 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strtrim(char const *s)
 {
 	size_t	i;
 	size_t	l;
 
+	if (!s)
+		return (NULL);
 	l = ft_strlen(s);
 	i = 0;
 	while (s[i] != '\0' && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))

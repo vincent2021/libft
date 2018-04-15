@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/07 18:56:03 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/07 22:51:20 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/15 22:41:03 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_strequ(char const *s1, char const *s2)
 	int	len_s1;
 	int	len_s2;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);

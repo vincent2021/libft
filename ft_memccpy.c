@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/13 21:43:05 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/13 21:53:16 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/15 23:31:35 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
 		size_t n)
 {
-	char		*d;
-	const char	*s;
+	unsigned char	*d;
+	const char		*s;
 
 	d = dst;
 	s = src;
@@ -25,9 +25,9 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
 		if (*s == c)
 		{
 			*d = *s;
-			return ((void *)++d);
+			return ((unsigned char *)++d);
 		}
 		*d++ = *s++;
 	}
-	return (NULL);
+	return ((unsigned char *)NULL);
 }
