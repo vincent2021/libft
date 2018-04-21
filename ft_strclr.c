@@ -20,9 +20,6 @@ void	ft_strclr(char *s)
 	if (s)
 	{
 		while (s[i])
-		{
-			s[i] = '\0';
-			i++;
-		}
+			s[i++] = '\0';
 	}
 }

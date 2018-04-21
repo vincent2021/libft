@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 22:29:47 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/21 20:35:40 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/22 00:09:49 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ char	*ft_strtrim(char const *s)
 {
 	size_t	i;
 	size_t	l;
+	char	*str;
 
 	if (!s)
 		return (NULL);
-	l = ft_strlen(s);
+	if ((l = ft_strlen(s)) == 0)
+		return ("");
 	i = 0;
 	while (s[i] != '\0' && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
 		i++;
@@ -27,5 +29,7 @@ char	*ft_strtrim(char const *s)
 		return ("");
 	while (s[l] == ' ' || s[l] == '\n' || s[l] == '\t' || s[l] == '\0')
 		l--;
-	return (ft_strsub(s, i, l - i + 1));
+	if (!(str = ft_strsub(s, i, l - i + 1)))
+		return (NULL);
+	return (str);
 }
