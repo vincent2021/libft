@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 18:56:28 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/21 20:29:48 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/21 21:36:06 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/21 21:48:45 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	int i;
-
-	i = 0;
-	if (s && f)
-	{
-		while (s[i])
-		{
-			f(&s[i]);
-			i++;
-		}
-	}
+	new->next = *alst;
+	*alst = new;
 }

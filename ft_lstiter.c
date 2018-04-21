@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 18:56:28 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/21 20:29:48 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/21 21:42:54 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/21 22:14:35 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	int i;
-
-	i = 0;
-	if (s && f)
-	{
-		while (s[i])
-		{
-			f(&s[i]);
-			i++;
-		}
-	}
+	if (lst->next)
+		ft_lstiter(lst->next, f);
+	f(lst);
 }
