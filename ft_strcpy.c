@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 13:59:38 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 14:59:05 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/23 00:06:38 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (src[i])

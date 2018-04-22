@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/07 22:04:07 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/15 22:36:02 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/22 23:56:33 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	unsigned long	i;
-	unsigned long	len_s1;
-	unsigned long	len_s2;
+	size_t	i;
+	size_t	len_s1;
+	size_t	len_s2;
 
 	i = 0;
 	if (!s1 || !s2)

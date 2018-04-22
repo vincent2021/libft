@@ -6,15 +6,15 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/15 18:56:54 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/15 23:10:26 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/23 00:22:44 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_countchar(char const *s, char c)
+static size_t	ft_countchar(char const *s, char c)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -22,10 +22,10 @@ static int		ft_countchar(char const *s, char c)
 	return (i);
 }
 
-static int		ft_countstr(char const *s, char c)
+static size_t	ft_countstr(char const *s, char c)
 {
-	int i;
-	int n;
+	size_t i;
+	size_t n;
 
 	i = 0;
 	n = 0;
@@ -43,10 +43,10 @@ static int		ft_countstr(char const *s, char c)
 
 char			**ft_strsplit(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		nbstr;
-	int		nbchr;
+	size_t	i;
+	size_t	j;
+	size_t	nbstr;
+	size_t	nbchr;
 	char	**tab;
 
 	i = 0;

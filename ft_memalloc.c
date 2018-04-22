@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/07 21:25:41 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 21:45:12 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/23 00:02:14 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memalloc(size_t size)
 {
 	void			*dst;
-	int				i;
+	size_t			i;
 	unsigned char	*clear;
 
 	i = 0;
@@ -24,9 +24,6 @@ void	*ft_memalloc(size_t size)
 		return (NULL);
 	clear = dst;
 	while (size--)
-	{
-		clear[i] = 0;
-		i++;
-	}
+		clear[i++] = 0;
 	return (dst);
 }

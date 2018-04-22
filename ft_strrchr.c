@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 15:28:45 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/14 00:02:01 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/23 00:20:56 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int n;
+	size_t	n;
 
 	n = 0;
 	while (*s)

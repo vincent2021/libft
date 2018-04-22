@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 14:23:14 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 15:07:34 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/23 00:23:51 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
-	int i;
-	int len_s1;
+	size_t i;
+	size_t len_s1;
 
 	i = 0;
 	len_s1 = ft_strlen(s1);
-	while (s1 != NULL && s2[i])
+	while (s1 && s2[i])
 	{
 		s1[i + len_s1] = s2[i];
 		i++;

@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 13:51:16 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/15 18:15:21 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/23 00:06:59 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		i;
-	int		l;
+	size_t	i;
+	size_t	l;
 	char	*dst;
 
 	i = 0;

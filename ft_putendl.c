@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/07 18:57:10 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/15 22:44:25 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/23 00:18:37 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	ft_putendl(char const *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (s)
 	{
 		while (s[i])
-		{
-			ft_putchar(s[i]);
-			i++;
-		}
+			ft_putchar(s[i++]);
 		ft_putchar('\n');
 	}
 }

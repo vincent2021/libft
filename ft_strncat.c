@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/08 14:31:01 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/08 15:10:04 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/22 23:55:33 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
-	unsigned long i;
-	unsigned long len_s1;
+	size_t i;
+	size_t len_s1;
 
 	i = 0;
 	len_s1 = ft_strlen(s1);
