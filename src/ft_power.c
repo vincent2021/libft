@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 18:30:15 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/28 19:05:12 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/28 20:05:54 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/28 20:15:03 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+size_t		ft_power(int nb, int power)
 {
-	if (c >= '0' && c <= '9')
+	if (power < 0)
+		return (0);
+	else if (power == 0)
 		return (1);
-	return (0);
+	else
+		nb = nb * ft_power(nb, power - 1);
+	return (nb);
 }

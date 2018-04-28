@@ -6,7 +6,7 @@
 #    By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/28 15:20:11 by vimucchi          #+#    #+#              #
-#    Updated: 2018/04/28 18:51:08 by vimucchi         ###   ########.fr        #
+#    Updated: 2018/04/28 21:10:52 by vimucchi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,14 +73,20 @@ SRC_NAME = \
 						ft_strcpy.c \
 						ft_strlcat.c \
 						ft_strnequ.c \
-						ft_strtrim.c
+						ft_strtrim.c \
+						ft_putnbr_base.c \
+						ft_convert_base.c \
+						ft_strlcpy.c \
+						ft_power.c \
+						ft_sort_tab.c
+
 
 OBJ_PATH = obj
 OBJ_NAME = $(SRC_NAME:.c=.o)
 
 SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
 OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
-INC = -I src/libft.h
+INC = -Iincludes
 
 all: $(NAME)
 

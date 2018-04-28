@@ -1,20 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_sort_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/07 18:30:15 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/28 19:05:12 by vimucchi         ###   ########.fr       */
+/*   Created: 2018/04/28 20:11:34 by vimucchi          #+#    #+#             */
+/*   Updated: 2018/04/28 20:15:09 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+void		ft_sort_tab(char **tab)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	int		i;
+	int		j;
+	int		k;
+	char	*swap;
+
+	k = 0;
+	i = 0;
+	j = 0;
+	while (tab[k])
+		k++;
+	while (tab[i])
+	{
+		j = 0;
+		while (j < k - 1)
+		{
+			if (0 < ft_strcmp(tab[j], tab[j + 1]))
+			{
+				swap = tab[j];
+				tab[j] = tab[j + 1];
+				tab[j + 1] = swap;
+			}
+			j++;
+		}
+		i++;
+	}
 }
