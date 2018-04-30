@@ -6,15 +6,15 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/28 20:05:54 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/28 20:15:03 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/30 22:56:03 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_power(int nb, int power)
+size_t		ft_power(size_t nb, int power)
 {
-	if (power < 0)
+	if (power < 0 || nb > 4294967296)
 		return (0);
 	else if (power == 0)
 		return (1);
