@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/07 18:58:54 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/29 19:37:24 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/30 22:36:09 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ size_t				ft_strlcpy(char *restrict dst, const char *restrict src,
 size_t size);
 size_t				ft_power(int nb, int power);
 void				ft_sort_tab(char **tab);
+int					ft_isspace(char c);
 
 #endif
