@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/28 19:49:37 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/28 20:16:03 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/30 23:16:41 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,18 @@
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t size)
 {
-	size_t	len;
+	size_t	len_s;
 	size_t	i;
 
-	len = ft_strlen(src);
+	len_s = ft_strlen(src);
 	i = 0;
-	if (size == 0)
-		return (len);
-	if (*src == '\0')
-		*dst = '\0';
 	while (src[i] && size > 1)
 	{
 		dst[i] = src[i];
 		i++;
 		size--;
 	}
-	dst[i] = '\0';
-	return (len);
+	if (size != 0)
+		dst[i] = '\0';
+	return (len_s);
 }
