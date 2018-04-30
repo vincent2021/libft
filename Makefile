@@ -6,7 +6,7 @@
 #    By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/28 15:20:11 by vimucchi          #+#    #+#              #
-#    Updated: 2018/04/30 22:36:31 by vimucchi         ###   ########.fr        #
+#    Updated: 2018/04/30 22:41:03 by vimucchi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,6 @@ SRC = \
 						ft_power.c \
 						ft_sort_tab.c \
 						ft_isspace.c
-
 
 OBJ = $(SRC:.c=.o)
 
