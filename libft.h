@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/07 18:58:54 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/28 21:09:08 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/04/29 19:37:24 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void				ft_putnbr_base(int n, char *base);
-char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
 size_t				ft_strlcpy(char *restrict dst, const char *restrict src,
 size_t size);
 size_t				ft_power(int nb, int power);

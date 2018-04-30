@@ -6,7 +6,7 @@
 #    By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/28 15:20:11 by vimucchi          #+#    #+#              #
-#    Updated: 2018/04/28 21:10:52 by vimucchi         ###   ########.fr        #
+#    Updated: 2018/04/29 19:37:57 by vimucchi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,7 @@ NAME = libft.a
 
 FLAGS = -Wall -Werror -Wextra
 
-SRC_PATH = src
-SRC_NAME = \
+SRC = \
 						ft_atoi.c \
 						ft_itoa.c \
 						ft_memalloc.c \
@@ -75,35 +74,29 @@ SRC_NAME = \
 						ft_strnequ.c \
 						ft_strtrim.c \
 						ft_putnbr_base.c \
-						ft_convert_base.c \
 						ft_strlcpy.c \
 						ft_power.c \
 						ft_sort_tab.c
 
 
-OBJ_PATH = obj
-OBJ_NAME = $(SRC_NAME:.c=.o)
-
-SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
-OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
-INC = -Iincludes
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
-$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
-	@mkdir $(OBJ_PATH) 2> /dev/null || true
-	gcc $(FLAGS) $(INC) -o $@ -c $<
+%.o: %.c 
+	gcc $(FLAGS) -o $@ -c $<
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) libft.h
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
 clean:
-	rm -rfv $(OBJ_PATH)
+	rm -fv $(OBJ)
 
 fclean: clean
-	rm -rfv $(NAME)
+	rm -fv $(NAME)
 
-re: fclean all
+re: fclean
+	@make all
 
 .PHONY: all, clean, fclean, re
