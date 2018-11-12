@@ -6,7 +6,7 @@
 /*   By: vimucchi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/07 19:00:49 by vimucchi          #+#    #+#             */
-/*   Updated: 2018/04/22 23:54:43 by vimucchi         ###   ########.fr       */
+/*   Updated: 2018/11/12 12:17:34 by vimucchi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(char const *s)
 {
-	size_t i;
+	size_t len;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }
